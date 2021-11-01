@@ -24,8 +24,9 @@ function main(){
 
     for (var i=0, max=all.length; i < max; i++) {
         if(all[i].textContent != undefined) {
-            if(all[i].textContent.includes("e")) {
+            if(all[i].textContent.includes("e") || all[i].textContent.includes("E")) {
                   var str = all[i].textContent.replaceAll("e","");
+                  str = str.replaceAll("E","");
                   all[i].textContent = str;
             }
         }
